@@ -29,13 +29,13 @@ const Board: React.FC<BoardProps> = ({ board, handleClick, winner }) => {
                 <img
                   src={cross}
                   alt='X'
-                  className='m-4 md:m-10 bg-[#1f3540] object-cover'
+                  className='m-5 md:m-10 bg-[#1f3540] object-fill'
                 />
               ) : cell === 'O' ? (
                 <img
                   src={circle}
                   alt='O'
-                  className='m-4 md:m-10 bg-[#1f3540] object-cover'
+                  className='m-5 md:m-10 bg-[#1f3540] object-fill'
                 />
               ) : null}
             </div>
