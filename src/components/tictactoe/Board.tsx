@@ -18,7 +18,7 @@ const Board: React.FC<BoardProps> = ({ board, handleClick, winner }) => {
             <div
               key={j}
               className={twJoin(
-                'flex w-[100px] h-[100px] md:w-[160px] md:h-[160px] bg-[#1f3540] rounded-xl border-4 border-[#0f1b21]',
+                'flex w-[100px] h-[100px] md:w-[160px] md:h-[160px] bg-[#1f3540] rounded-xl border-4 border-[#0f1b21] p-2 md:p-10',
                 cell !== null || winner !== null
                   ? 'cursor-default'
                   : 'cursor-pointer hover:bg-teal-800'
@@ -26,12 +26,16 @@ const Board: React.FC<BoardProps> = ({ board, handleClick, winner }) => {
               onClick={() => handleClick(i, j)}
             >
               {cell === 'X' ? (
-                <img src={cross} alt='X' className='m-2 md:m-10 bg-[#1f3540]' />
+                <img
+                  src={cross}
+                  alt='X'
+                  className='bg-[#1f3540] object-cover'
+                />
               ) : cell === 'O' ? (
                 <img
                   src={circle}
                   alt='O'
-                  className='m-2 md:m-10 bg-[#1f3540] object-cover'
+                  className='bg-[#1f3540] object-cover'
                 />
               ) : null}
             </div>
