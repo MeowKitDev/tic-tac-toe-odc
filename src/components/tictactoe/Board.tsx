@@ -31,7 +31,7 @@ const Board: React.FC<BoardProps> = ({ board, handleClick, winner }) => {
                 <img
                   src={circle}
                   alt='O'
-                  className='m-2 md:m-10 bg-[#1f3540]'
+                  className='m-2 md:m-10 bg-[#1f3540] object-cover'
                 />
               ) : null}
             </div>
